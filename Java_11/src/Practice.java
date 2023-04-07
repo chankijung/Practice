@@ -25,10 +25,62 @@ interface UserSystem {
 }
 
 // OrkNPC1 클래스
+class OrkNPC1 extends GreenOrc implements NPCSystem{
+    @Override
+    public void setHealth() {
+        this.health=100;
+    }
 
+    @Override
+    public void setDamage(){
+        this.attackDamage=1;
+    }
+
+    @Override
+    public void setDefense() {
+    this.defense=5;
+    }
+
+    @Override
+    public void conversationSystem() {
+        System.out.println("하이하이");
+    }
+
+    @Override
+    public void questionSystem() {
+        System.out.println("새로운 퀘스트");
+        System.out.println("퀘스트 완료");
+    }
+}
 
 // OrkUser1 클래스
+class OrkUser1 extends GreenOrc implements UserSystem{
+    @Override
+    public void setHealth() {
+        this.health=200;
+    }
 
+    @Override
+    public void setDamage() {
+        this.attackDamage=20;
+    }
+
+    @Override
+    public void setDefense() {
+        this.defense=10;
+    }
+
+    @Override
+    public void partySystem() {
+        System.out.println("파티 초대");
+        System.out.println("파티 수락");
+    }
+
+    @Override
+    public void tradeSystem() {
+        System.out.println("거래신청");
+    }
+}
 
 
 public class Practice {
